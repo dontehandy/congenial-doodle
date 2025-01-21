@@ -38,7 +38,7 @@ RSpec.describe Carnival do
     carnival.add_ride(ride1)
     carnival.add_ride(ride2)
 
-    expect(carnival.most_popular_ride).to eq(ride1)
+    expect(carnival.most_popular_ride).to eq('Carousel')
   end
 
   it 'can determine the most profitable ride' do
@@ -59,7 +59,7 @@ RSpec.describe Carnival do
     carnival.add_ride(ride1)
     carnival.add_ride(ride2)
 
-    expect(carnival.most_profitable_ride).to eq(ride2)
+    expect(carnival.most_profitable_ride).to eq('Ferris Wheel')
   end
 
   it 'can calculate the total revenue earned from all its rides' do

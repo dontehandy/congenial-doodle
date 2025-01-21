@@ -11,11 +11,11 @@ class Carnival
   end
 
   def most_popular_ride
-    @rides.max_by { |ride| ride.rider_log.values.sum }
+    @rides.max_by { |ride| ride.rider_log.values.sum }.name
   end
 
   def most_profitable_ride
-    @rides.max_by { |ride| ride.total_revenue }
+    @rides.max_by { |ride| ride.total_revenue }.name
   end
 
   def total_revenue

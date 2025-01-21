@@ -262,10 +262,10 @@ pry(main)> carnival.add_ride(ride2)
 pry(main)> carnival.add_ride(ride3)
 
 pry(main)> carnival.most_popular_ride
-#=> #<Ride:0x000000015a136ab8 @admission_fee=1, @excitement=:gentle, @min_height=24, @name="Carousel", @rider_log={...}>
+#=>  @name="Carousel"
 
 pry(main)> carnival.most_profitable_ride
-#=> #<Ride:0x0000000159a0cd00 @admission_fee=5, @excitement=:gentle, @min_height=36, @name="Ferris Wheel", @rider_log={...}>
+#=>  @name="Ferris Wheel"
 
 pry(main)> carnival.total_revenue
 #=> 10 #Total revenue = $3 (from ride1) + $5 (from ride2) + $2 (from ride3) = $10.
