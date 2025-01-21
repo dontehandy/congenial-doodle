@@ -5,6 +5,7 @@ SimpleCov.start do
 end
 
 require 'rspec'
+require 'pry'
 require './lib/visitor'
 require './lib/ride'
 
