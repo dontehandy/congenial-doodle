@@ -1,4 +1,4 @@
-require './lib/visitor'
+require 'spec_helper'
 
 RSpec.describe Visitor do
   it 'exists and has attributes' do

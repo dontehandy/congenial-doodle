@@ -1,5 +1,4 @@
-require './lib/ride'
-require './lib/visitor'
+require 'spec_helper'
 
 RSpec.describe Ride do
   it 'exists and has attributes' do
