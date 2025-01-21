@@ -1,13 +1,14 @@
 require 'simplecov'
 SimpleCov.start do
   enable_coverage :branch
-  add_filter '/spec/' #will not include files in the spec directory
+  add_filter '/spec/' # will not include files in the spec directory
 end
 
 require 'rspec'
 require 'pry'
 require './lib/visitor'
 require './lib/ride'
+require './lib/carnival'
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|

@@ -1,5 +1,4 @@
 require 'spec_helper'
-require './lib/carnival'
 
 RSpec.describe Carnival do
   it 'exists and has attributes' do
