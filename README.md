@@ -18,9 +18,7 @@ Graded Items:
 2. Visitors have `preferences` and can list those preferences
 3. Visitors can check if they are tall enough for rides based on a given height threshold (height given in inches)
 
-
 Use TDD to create a `Visitor` class that responds to the following interaction pattern:
-
 
 ```ruby
 pry(main)> require './lib/visitor'
@@ -65,7 +63,6 @@ pry(main)> visitor3.tall_enough?(54)
 
 pry(main)> visitor1.tall_enough?(64)
 #=> false
-
 ```
 
 ## Iteration 2 - Rides
@@ -178,6 +175,38 @@ Use TDD to create a `Carnival` class that adds the following functionality:
 
 1. Each carnival has a duration, as well as a way to read that data
 2. Each carnival can add rides and can list those rides.
+
+Use TDD to create a `Carnival` class that responds to the following interaction pattern:
+
+```ruby
+pry(main)> require './lib/carnival'
+#=> true
+
+pry(main)> require './lib/ride'
+#=> true
+
+pry(main)> carnival = Carnival.new(14)
+#=> #<Carnival:0x000000015a136ab8 @duration=14, @rides=[]>
+
+pry(main)> carnival.duration
+#=> 14
+
+pry(main)> carnival.rides
+#=> []
+
+pry(main)> ride1 = Ride.new({ name: 'Carousel', min_height: 24, admission_fee: 1, excitement: :gentle })
+#=> #<Ride:0x000000015a136ab8 @admission_fee=1, @excitement=:gentle, @min_height=24, @name="Carousel", @rider_log={}>
+
+pry(main)> ride2 = Ride.new({ name: 'Ferris Wheel', min_height: 36, admission_fee: 5, excitement: :gentle })
+#=> #<Ride:0x0000000159a0cd00 @admission_fee=5, @excitement=:gentle, @min_height=36, @name="Ferris Wheel", @rider_log={}>
+
+pry(main)> carnival.add_ride(ride1)
+
+pry(main)> carnival.add_ride(ride2)
+
+pry(main)> carnival.rides
+#=> [#<Ride:0x000000015a136ab8 @admission_fee=1, @excitement=:gentle, @min_height=24, @name="Carousel", @rider_log={}>, #<Ride:0x0000000159a0cd00 @admission_fee=5, @excitement=:gentle, @min_height=36, @name="Ferris Wheel", @rider_log={}>]
+```
 
 Additionally, use TDD to add the following functionality to the `Carnival` class. A passing challenge will complete *at least* two of the following. We recommend completing all three if you have time.
 
